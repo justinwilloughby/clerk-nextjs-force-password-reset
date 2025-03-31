@@ -1,0 +1,19 @@
+{
+  "name": "clerk-user-upload",
+  "version": "1.0.0",
+  "description": "Script to upload users to Clerk",
+  "main": "upload-users.ts",
+  "type": "module",
+  "scripts": {
+    "upload": "node --loader ts-node/esm upload-users.ts"
+  },
+  "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.13.11",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+} 
