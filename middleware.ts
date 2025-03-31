@@ -1,13 +1,10 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 import { NextRequest, NextResponse } from 'next/server'
 
-const isResetPasswordRoute = createRouteMatcher(['/reset-password', '/api/reset-password']);
+const isResetPasswordRoute = createRouteMatcher(['/reset-password']);
 
 export default clerkMiddleware(async (auth, req: NextRequest) => {
     const { userId, sessionClaims } = await auth();
-
-    console.log('userId', userId);
-    console.log('sessionClaims', sessionClaims);
 
     // If user needs to reset their password and is not on the reset password page or API route, redirect them
     if (userId && sessionClaims?.metadata.passwordResetRequired && !isResetPasswordRoute(req)) {
