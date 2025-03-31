@@ -17,7 +17,7 @@ export async function resetPassword(password: string): Promise<ResetPasswordResp
         };
     }
 
-    if (!sessionClaims?.passwordResetRequired) {
+    if (!sessionClaims?.metadata?.passwordResetRequired) {
         return {
             success: false,
             message: 'Password reset not required'

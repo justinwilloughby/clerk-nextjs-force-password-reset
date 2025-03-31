@@ -2,10 +2,12 @@
   "name": "clerk-user-upload",
   "version": "1.0.0",
   "description": "Script to upload users to Clerk",
-  "main": "upload-users.ts",
+  "main": "create-users.ts",
   "type": "module",
   "scripts": {
-    "upload": "node --loader ts-node/esm upload-users.ts"
+    "create": "node --loader ts-node/esm create-users.ts",
+    "delete": "node --loader ts-node/esm delete-users.ts",
+    "reset": "npm run delete && npm run create"
   },
   "dependencies": {
     "@clerk/clerk-sdk-node": "^4.13.11",
