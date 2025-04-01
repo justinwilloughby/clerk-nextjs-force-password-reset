@@ -1,6 +1,6 @@
 # Clerk Next.js Force Password Reset Sample
 
-This is a Next.js 
+This is a Next.js sample application that shows how to enforce password reset for your users.
 
 ## Using This Sample
 
