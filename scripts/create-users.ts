@@ -59,32 +59,36 @@ const userSchema = z.object({
 type User = z.infer<typeof userSchema>;
 
 // Example users data - replace with your actual data
+// const users: User[] = [
+//     {
+//         email: 'justin+50@clerk.dev',
+//         firstName: 'Justin',
+//         lastName: '50',
+//         passwordResetRequired: true
+//     },
+//     {
+//         email: 'justin+51@clerk.dev',
+//         firstName: 'Justin',
+//         lastName: '51',
+//         passwordResetRequired: true
+//     },
+//     {
+//         email: 'justin+52@clerk.dev',
+//         passwordDigest: '$2a$12$s7BZwqxWN3be1zwXrPj5BOACYRHbSmOrhgNwk5OFKWheRRT2.0LrS',
+//         passwordHasher: 'bcrypt',
+//         passwordResetRequired: false
+//     },
+//     {
+//         email: 'justin+53@clerk.dev',
+//         passwordDigest: '$2a$12$s7BZwqxWN3be1zwXrPj5BOACYRHbSmOrhgNwk5OFKWheRRT2.0LrS',
+//         passwordHasher: 'bcrypt',
+//         passwordResetRequired: true
+//     }
+// ];
+
 const users: User[] = [
-    {
-        email: 'justin+50@clerk.dev',
-        firstName: 'Justin',
-        lastName: '50',
-        passwordResetRequired: true
-    },
-    {
-        email: 'justin+51@clerk.dev',
-        firstName: 'Justin',
-        lastName: '51',
-        passwordResetRequired: true
-    },
-    {
-        email: 'justin+52@clerk.dev',
-        passwordDigest: '$2a$12$s7BZwqxWN3be1zwXrPj5BOACYRHbSmOrhgNwk5OFKWheRRT2.0LrS',
-        passwordHasher: 'bcrypt',
-        passwordResetRequired: false
-    },
-    {
-        email: 'justin+53@clerk.dev',
-        passwordDigest: '$2a$12$s7BZwqxWN3be1zwXrPj5BOACYRHbSmOrhgNwk5OFKWheRRT2.0LrS',
-        passwordHasher: 'bcrypt',
-        passwordResetRequired: true
-    }
-];
+    // TODO: Insert your users here
+]
 
 async function uploadUsers() {
     console.log('Starting user upload...');
